@@ -1,0 +1,243 @@
+
+已选择 1 项内容
+
+跳至内容
+通过屏幕阅读器使用 Gmail
+in:sent 
+会话
+new json
+
+imba S <imbasjx@gmail.com>
+附件
+8月17日周四 14:34 (1天前)
+发送至 Dean
+
+
+
+--
+    
+3
+ 个附件
+  •  已由 Gmail 扫描
+{
+  "log": {
+    "level": "warn",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "remote",
+        "address": "tcp://8.8.8.8",
+        "detour": "proxy"
+      },
+      {
+        "tag": "local",
+        "address": "223.5.5.5",
+        "detour": "direct"
+      },
+      {
+        "tag": "block",
+        "address": "rcode://success"
+      },
+      {
+        "tag": "local_local",
+        "address": "223.5.5.5",
+        "detour": "direct"
+      }
+    ],
+    "rules": [
+      {
+        "server": "local",
+        "disable_cache": true,
+        "geosite": [
+          "cn"
+        ]
+      },
+      {
+        "server": "block",
+        "disable_cache": true,
+        "geosite": [
+          "category-ads-all"
+        ]
+      },
+      {
+        "outbound": "any",
+        "server": "local_local"
+      }
+    ],
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "interface_name": "singbox_tun",
+      "inet4_address": "172.19.0.1/30",
+      "inet6_address": "fdfe:dcba:9876::1/126",
+      "mtu": 9000,
+      "auto_route": true,
+      "strict_route": true,
+      "stack": "gvisor",
+      "sniff": true
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "vmess",
+      "tag": "proxy",
+      "server": "select-us.kunlun-auto.com",
+      "server_port": 9051,
+      "uuid": "c8bf4402-afa9-3cdc-9578-a965e7feff9a",
+      "security": "auto",
+      "alter_id": 0
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    },
+    {
+      "type": "dns",
+      "tag": "dns_out"
+    }
+  ],
+  "route": {
+    "auto_detect_interface": true,
+    "rules": [
+      {
+        "outbound": "dns_out",
+        "inbound": [
+          "dns_in"
+        ]
+      },
+      {
+        "outbound": "dns_out",
+        "protocol": [
+          "dns"
+        ]
+      },
+      {
+        "outbound": "block",
+        "network": "udp",
+        "port": [
+          135,
+          137,
+          138,
+          139,
+          5353
+        ]
+      },
+      {
+        "outbound": "block",
+        "ip_cidr": [
+          "224.0.0.0/3",
+          "ff00::/8"
+        ]
+      },
+      {
+        "outbound": "block",
+        "source_ip_cidr": [
+          "224.0.0.0/3",
+          "ff00::/8"
+        ]
+      },
+      {
+        "outbound": "dns_out",
+        "port": [
+          53
+        ],
+        "process_name": [
+          "wv2ray.exe",
+          "v2ray.exe",
+          "SagerNet.exe",
+          "v2ray.exe",
+          "v2ray.exe",
+          "xray.exe",
+          "wxray.exe",
+          "clash-windows-amd64-v3.exe",
+          "clash-windows-amd64.exe",
+          "clash-windows-386.exe",
+          "clash.exe",
+          "Clash.Meta-windows-amd64-compatible.exe",
+          "Clash.Meta-windows-amd64.exe",
+          "Clash.Meta-windows-386.exe",
+          "Clash.Meta.exe",
+          "clash.exe",
+          "hysteria-windows-amd64.exe",
+          "hysteria-windows-386.exe",
+          "hysteria.exe",
+          "naiveproxy.exe",
+          "naive.exe",
+          "tuic-client.exe",
+          "tuic.exe"
+        ]
+      },
+      {
+        "outbound": "direct",
+        "process_name": [
+          "wv2ray.exe",
+          "v2ray.exe",
+          "SagerNet.exe",
+          "v2ray.exe",
+          "v2ray.exe",
+          "xray.exe",
+          "wxray.exe",
+          "clash-windows-amd64-v3.exe",
+          "clash-windows-amd64.exe",
+          "clash-windows-386.exe",
+          "clash.exe",
+          "Clash.Meta-windows-amd64-compatible.exe",
+          "Clash.Meta-windows-amd64.exe",
+          "Clash.Meta-windows-386.exe",
+          "Clash.Meta.exe",
+          "clash.exe",
+          "hysteria-windows-amd64.exe",
+          "hysteria-windows-386.exe",
+          "hysteria.exe",
+          "naiveproxy.exe",
+          "naive.exe",
+          "tuic-client.exe",
+          "tuic.exe",
+          "sing-box-client.exe",
+          "sing-box.exe"
+        ]
+      },
+      {
+        "outbound": "direct",
+        "domain": [
+          "example-example.com",
+          "example-example2.com"
+        ],
+        "domain_suffix": [
+          ".example-example.com",
+          ".example-example2.com"
+        ]
+      },
+      {
+        "outbound": "block",
+        "geosite": [
+          "category-ads-all"
+        ]
+      },
+      {
+        "outbound": "direct",
+        "geosite": [
+          "cn"
+        ]
+      },
+      {
+        "outbound": "direct",
+        "geoip": [
+          "private",
+          "cn"
+        ]
+      }
+    ]
+  }
+}
+usa-cf09.json
+当前显示usa-cf09.json。
