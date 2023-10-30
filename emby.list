@@ -9,7 +9,6 @@ HOST, temby.285286.xyz, Temby
 HOST, emby.pilipiliultra.top, pilipli主域名
 HOST, emby.pilipiliultra.com, pilipli-cf
 HOST, pilipili.mikuu.link, pilipli反代
-IP-CIDR, 146.56.36.1/32 ,PiliPili
 HOST, emby.bangumi.ca, nyamedia
 HOST, media.nijigem.by, 二次元
 DOMAIN-SUFFIX, embyplus.org, 纸片人
