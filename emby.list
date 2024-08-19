@@ -1,6 +1,7 @@
 # (Emby)
 # > 需要代理的
 DOMAIN-SUFFIX, pornemby.club, pornemby
+DOMAIN-SUFFIX, pornemby.com, pornemby
 HOST, cf.freetz.top, Magic
 HOST, 789.123456.al, TreeDiagram
 HOST, emby.agon.cf, 私人影院
