@@ -19,5 +19,4 @@ IP-CIDR, 152.53.67.239/32, tanhua
 
 # HOST, emby.tnx.one, tiannanxiaozhu
 
-# > cachefly_CDN
-DOMAIN-SUFFIX, cachefly.net, cachefly
+
