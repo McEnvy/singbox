@@ -1,3 +1,6 @@
+# >> copilot
+host,copilot.microsoft.com,copilot
+
 # >> Google
 host-keyword,google,Google
 host-suffix,265.com,Google
